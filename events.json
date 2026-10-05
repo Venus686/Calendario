@@ -1,0 +1,353 @@
+[
+  {
+    "date": "2026-10-06",
+    "time": "20:45",
+    "category": "nl",
+    "short": "Croacia–ESP",
+    "title": "Croacia – España",
+    "detail": "Jornada 4 · Grupo A3 de la Liga A.",
+    "place": "Estadio Poljud, Split"
+  },
+  {
+    "date": "2026-10-09",
+    "time": "14:30",
+    "category": "f1",
+    "short": "Sprint Q",
+    "title": "Singapur · Clasificación sprint",
+    "detail": "Fin de semana con sprint.",
+    "place": "Marina Bay, Singapur"
+  },
+  {
+    "date": "2026-10-10",
+    "time": "11:00",
+    "category": "f1",
+    "short": "Sprint",
+    "title": "Singapur · Carrera sprint",
+    "detail": "Carrera corta del sábado.",
+    "place": "Marina Bay, Singapur"
+  },
+  {
+    "date": "2026-10-10",
+    "time": "15:00",
+    "category": "f1",
+    "short": "Quali Singapur",
+    "title": "Singapur · Clasificación",
+    "detail": "Define la parrilla del domingo.",
+    "place": "Marina Bay, Singapur"
+  },
+  {
+    "date": "2026-10-11",
+    "time": "14:00",
+    "category": "f1",
+    "short": "GP Singapur",
+    "title": "GP de Singapur",
+    "detail": "Carrera nocturna en circuito urbano.",
+    "place": "Marina Bay, Singapur"
+  },
+  {
+    "date": "2026-10-15",
+    "time": "20:00",
+    "category": "lol",
+    "short": "Play-In D1",
+    "title": "Play-In · Día 1",
+    "detail": "Karmine Corp, MVK Esports, el 3.º de la LCS y el 2.º de Brasil. Dos Bo5: la segunda serie empieza hacia la 01:00 del día 16.",
+    "place": "Riot Games Arena, Los Ángeles"
+  },
+  {
+    "date": "2026-10-16",
+    "time": "20:00",
+    "category": "lol",
+    "short": "Play-In D2",
+    "title": "Play-In · Día 2",
+    "detail": "Doble eliminación, todo Bo5. Los cruces salen de los resultados del día anterior.",
+    "place": "Riot Games Arena, Los Ángeles"
+  },
+  {
+    "date": "2026-10-17",
+    "time": "20:00",
+    "category": "lol",
+    "short": "Play-In D3",
+    "title": "Play-In · Día 3",
+    "detail": "Doble eliminación, todo Bo5. Quien pierde en el cuadro inferior queda fuera.",
+    "place": "Riot Games Arena, Los Ángeles"
+  },
+  {
+    "date": "2026-10-18",
+    "time": "20:00",
+    "category": "lol",
+    "short": "Play-In D4",
+    "title": "Play-In · Final del día 4",
+    "detail": "Un solo equipo pasa a la fase suiza. El resto se va a casa.",
+    "place": "Riot Games Arena, Los Ángeles"
+  },
+  {
+    "date": "2026-10-19",
+    "time": "01:30",
+    "category": "vs",
+    "short": "VS Show",
+    "title": "Victoria's Secret Fashion Show",
+    "detail": "Es el domingo 18 a las 16:30 en Los Ángeles, así que en España es la madrugada del lunes 19. Tema: Fandemonium. Con Gigi Hadid, Alex Consani, Paloma Elsesser y Abby Champion en pasarela. Actúan Megan Thee Stallion y McRae. Se emite en directo por YouTube.",
+    "place": "Los Ángeles, sede por anunciar"
+  },
+  {
+    "date": "2026-10-23",
+    "time": "19:00",
+    "category": "lol",
+    "short": "Suizo D1",
+    "title": "Fase suiza · Día 1",
+    "detail": "Entran los 15 clasificados directos, entre ellos G2, Movistar KOI, T1 y Gen.G, junto al ganador del Play-In. Cruces por récord de victorias y derrotas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-24",
+    "time": "19:00",
+    "category": "lol",
+    "short": "Suizo D2",
+    "title": "Fase suiza · Día 2",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-24",
+    "time": "23:00",
+    "category": "f1",
+    "short": "Quali Austin",
+    "title": "Estados Unidos · Clasificación",
+    "detail": "Última noche de horario de verano en España.",
+    "place": "Circuito de las Américas, Austin"
+  },
+  {
+    "date": "2026-10-25",
+    "time": "18:00",
+    "category": "lol",
+    "short": "Suizo D3",
+    "title": "Fase suiza · Día 3",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-25",
+    "time": "21:00",
+    "category": "f1",
+    "short": "GP EE. UU.",
+    "title": "GP de Estados Unidos",
+    "detail": "Primera carrera tras el cambio de hora.",
+    "place": "Circuito de las Américas, Austin"
+  },
+  {
+    "date": "2026-10-26",
+    "time": "18:00",
+    "category": "lol",
+    "short": "Suizo D4",
+    "title": "Fase suiza · Día 4",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-28",
+    "time": "21:00",
+    "category": "lol",
+    "short": "Suizo D5",
+    "title": "Fase suiza · Día 5",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-29",
+    "time": "21:00",
+    "category": "lol",
+    "short": "Suizo D6",
+    "title": "Fase suiza · Día 6",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-30",
+    "time": "21:00",
+    "category": "lol",
+    "short": "Suizo D7",
+    "title": "Fase suiza · Día 7",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-31",
+    "time": "18:00",
+    "category": "lol",
+    "short": "Suizo D8",
+    "title": "Fase suiza · Día 8",
+    "detail": "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-10-31",
+    "time": "22:00",
+    "category": "f1",
+    "short": "Quali México",
+    "title": "México · Clasificación",
+    "detail": "Define la parrilla del domingo.",
+    "place": "Autódromo Hermanos Rodríguez"
+  },
+  {
+    "date": "2026-11-01",
+    "time": "21:00",
+    "category": "f1",
+    "short": "GP México",
+    "title": "GP de la Ciudad de México",
+    "detail": "Carrera en la altura de Ciudad de México.",
+    "place": "Autódromo Hermanos Rodríguez"
+  },
+  {
+    "date": "2026-11-03",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Cuartos",
+    "title": "Cuartos de final · Día 1",
+    "detail": "Eliminación directa entre los 8 mejores de la fase suiza.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-04",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Cuartos",
+    "title": "Cuartos de final · Día 2",
+    "detail": "Eliminación directa entre los 8 mejores de la fase suiza.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-05",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Cuartos",
+    "title": "Cuartos de final · Día 3",
+    "detail": "Eliminación directa entre los 8 mejores de la fase suiza.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-06",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Cuartos",
+    "title": "Cuartos de final · Día 4",
+    "detail": "Eliminación directa entre los 8 mejores de la fase suiza.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-07",
+    "time": "19:00",
+    "category": "f1",
+    "short": "Quali Brasil",
+    "title": "Brasil · Clasificación",
+    "detail": "Define la parrilla del domingo.",
+    "place": "Interlagos, São Paulo"
+  },
+  {
+    "date": "2026-11-07",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Semis",
+    "title": "Semifinal 1",
+    "detail": "Eliminación directa.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-08",
+    "time": "18:00",
+    "category": "f1",
+    "short": "GP Brasil",
+    "title": "GP de São Paulo",
+    "detail": "Tercera carrera de la gira americana.",
+    "place": "Interlagos, São Paulo"
+  },
+  {
+    "date": "2026-11-08",
+    "time": "23:00",
+    "category": "lol",
+    "short": "Semis",
+    "title": "Semifinal 2",
+    "detail": "Eliminación directa.",
+    "place": "Credit Union of Texas Event Center, Allen"
+  },
+  {
+    "date": "2026-11-12",
+    "time": "20:45",
+    "category": "nl",
+    "short": "Chequia–ESP",
+    "title": "Chequia – España",
+    "detail": "Jornada 5 · Grupo A3 de la Liga A.",
+    "place": "Sede por confirmar"
+  },
+  {
+    "date": "2026-11-14",
+    "time": "20:00",
+    "category": "lol",
+    "short": "Final LoL",
+    "title": "Gran final del Mundial",
+    "detail": "Quien gane levanta la Copa del Invocador. T1 llega como tricampeón vigente.",
+    "place": "Barclays Center, Brooklyn"
+  },
+  {
+    "date": "2026-11-15",
+    "time": "20:45",
+    "category": "nl",
+    "short": "ESP–Inglaterra",
+    "title": "España – Inglaterra",
+    "detail": "Jornada 6 · Grupo A3. Cierra la fase de liga y repite la final de la Eurocopa 2024.",
+    "place": "Sede por confirmar"
+  },
+  {
+    "date": "2026-11-21",
+    "time": "05:00",
+    "category": "f1",
+    "short": "Quali Las Vegas",
+    "title": "Las Vegas · Clasificación",
+    "detail": "Madrugada en España: es viernes por la noche en Las Vegas.",
+    "place": "Las Vegas Strip Circuit"
+  },
+  {
+    "date": "2026-11-22",
+    "time": "05:00",
+    "category": "f1",
+    "short": "GP Las Vegas",
+    "title": "GP de Las Vegas",
+    "detail": "Madrugada del domingo en España: se corre el sábado por la noche en Las Vegas.",
+    "place": "Las Vegas Strip Circuit"
+  },
+  {
+    "date": "2026-11-28",
+    "time": "19:00",
+    "category": "f1",
+    "short": "Quali Catar",
+    "title": "Catar · Clasificación",
+    "detail": "Define la parrilla del domingo.",
+    "place": "Lusail, Catar"
+  },
+  {
+    "date": "2026-11-29",
+    "time": "17:00",
+    "category": "f1",
+    "short": "GP Catar",
+    "title": "GP de Catar",
+    "detail": "Carrera al atardecer en Lusail.",
+    "place": "Lusail, Catar"
+  },
+  {
+    "date": "2026-12-05",
+    "time": "15:00",
+    "category": "f1",
+    "short": "Quali Abu Dabi",
+    "title": "Abu Dabi · Clasificación",
+    "detail": "Última clasificación de la temporada.",
+    "place": "Yas Marina, Abu Dabi"
+  },
+  {
+    "date": "2026-12-06",
+    "time": "14:00",
+    "category": "f1",
+    "short": "GP Abu Dabi",
+    "title": "GP de Abu Dabi",
+    "detail": "Final de temporada.",
+    "place": "Yas Marina, Abu Dabi"
+  }
+]

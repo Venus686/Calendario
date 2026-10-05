@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Calendario de octubre a diciembre de 2026: Mundial de LoL, Nations League de España, Fórmula 1 y Victoria's Secret Fashion Show, en hora de España.">
+<title>Calendario Otoño 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout: month grid with colour-coded pills, a day panel underneath, and a card list view. Soft lilac paper, one colour per event type. */
+:root {
+  --bg: #f6f4fb;
+  --surface: #ffffff;
+  --ink: #2a2438;
+  --muted: #7a7390;
+  --line: #e7e2f3;
+  --lol: #8e7cf5; --lol-t: #ebe7ff; --lol-i: #5340cf;
+  --nl: #f26b5b;  --nl-t: #ffe4df;  --nl-i: #b93a2b;
+  --f1: #2fa68a;  --f1-t: #d9f3ec;  --f1-i: #17705b;
+  --vs: #e5559a;  --vs-t: #ffdeed;  --vs-i: #aa2468;
+  --today: #2a2438;
+  --shadow: 0 1px 2px rgba(42,36,56,.05), 0 8px 24px rgba(42,36,56,.06);
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15121d; --surface: #1f1b2b; --ink: #f0ecfa; --muted: #a39cb8; --line: #2f2a40;
+    --lol: #a99cff; --lol-t: #2d2757; --lol-i: #c8bfff;
+    --nl: #ff8e80;  --nl-t: #4a2622;  --nl-i: #ffb3a9;
+    --f1: #5fd1b3;  --f1-t: #173a33;  --f1-i: #8fe6cf;
+    --vs: #ff7fb8;  --vs-t: #4a1f36;  --vs-i: #ffa9d0;
+    --today: #f0ecfa;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15121d; --surface: #1f1b2b; --ink: #f0ecfa; --muted: #a39cb8; --line: #2f2a40;
+  --lol: #a99cff; --lol-t: #2d2757; --lol-i: #c8bfff;
+  --nl: #ff8e80;  --nl-t: #4a2622;  --nl-i: #ffb3a9;
+  --f1: #5fd1b3;  --f1-t: #173a33;  --f1-i: #8fe6cf;
+  --vs: #ff7fb8;  --vs-t: #4a1f36;  --vs-i: #ffa9d0;
+  --today: #f0ecfa;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; padding-inline: 16px; padding-block: 28px 56px; }
+.wrap { max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--lol); outline-offset: 2px; }
+
+.c-lol { --x: var(--lol); --x-t: var(--lol-t); --x-i: var(--lol-i); }
+.c-nl  { --x: var(--nl);  --x-t: var(--nl-t);  --x-i: var(--nl-i); }
+.c-f1  { --x: var(--f1);  --x-t: var(--f1-t);  --x-i: var(--f1-i); }
+.c-vs  { --x: var(--vs);  --x-t: var(--vs-t);  --x-i: var(--vs-i); }
+
+/* header */
+.top { display: flex; flex-direction: column; gap: 10px; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 9vw, 84px); line-height: .98; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+h1 em { color: var(--vs); }
+.lede { max-width: 58ch; color: var(--muted); margin: 0; }
+.tz { display: inline-flex; align-self: flex-start; gap: 8px; align-items: center; font-size: 12.5px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; color: var(--muted); }
+
+/* next up */
+.next h2, .later h2, .panel-title { font-family: var(--serif); font-weight: 400; font-size: 28px; margin: 0 0 12px; }
+.next-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.ncard { background: var(--x-t); color: var(--x-i); border-radius: 22px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ncard .when { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; opacity: .85; }
+.ncard .what { font-family: var(--serif); font-size: 24px; line-height: 1.1; color: var(--ink); }
+.ncard .meta { font-size: 13px; color: var(--ink); opacity: .75; font-variant-numeric: tabular-nums; }
+
+/* controls */
+.controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; font-size: 14px; font-weight: 500; transition: transform .15s, background .15s; }
+.chip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--x); }
+.chip small { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--x-t); border-color: var(--x); color: var(--x-i); }
+.chip[aria-pressed="false"] { opacity: .55; }
+.chip:hover { transform: translateY(-1px); }
+.seg { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button { border: 0; background: transparent; border-radius: 999px; padding: 6px 16px; font-size: 14px; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+/* calendar */
+.cal { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 14px; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cal-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 6vw, 44px); margin: 0; line-height: 1; }
+.cal-head h2 span { color: var(--muted); font-style: italic; }
+.nav { display: flex; gap: 6px; }
+.nav button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); font-size: 18px; line-height: 1; }
+.nav button:disabled { opacity: .35; cursor: default; }
+.dow, .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.dow span { text-align: center; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.cell { min-height: 112px; background: var(--bg); border: 1.5px solid transparent; border-radius: 16px; padding: 8px 6px 6px; display: flex; flex-direction: column; gap: 4px; text-align: left; min-width: 0; transition: border-color .15s, transform .15s; }
+.cell:hover { border-color: var(--line); transform: translateY(-1px); }
+.cell.blank { background: transparent; pointer-events: none; }
+.cell.sel { border-color: var(--ink); background: var(--surface); }
+.cell.past { opacity: .5; }
+.num { font-size: 13px; font-weight: 700; padding-inline: 4px; align-self: flex-start; font-variant-numeric: tabular-nums; }
+.cell.today .num { background: var(--today); color: var(--bg); border-radius: 999px; padding: 1px 8px; }
+.pills { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.pill { background: var(--x-t); color: var(--x-i); border-radius: 8px; padding: 2px 6px; font-size: 11px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.more { font-size: 11px; color: var(--muted); padding-inline: 4px; }
+.dots { display: none; gap: 3px; flex-wrap: wrap; padding-inline: 4px; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--x); }
+
+/* day panel */
+.day { display: flex; flex-direction: column; gap: 10px; }
+.day h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; margin: 0; text-transform: capitalize; }
+.ev { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; background: var(--x-t); border-radius: 20px; padding: 14px 16px; }
+.ev .time { font-family: var(--serif); font-size: 32px; line-height: 1; color: var(--x-i); font-variant-numeric: tabular-nums; }
+.ev .body { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.tag { align-self: flex-start; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--x-i); }
+.ev .t { font-size: 17px; font-weight: 700; color: var(--ink); text-wrap: balance; }
+.ev .s { color: var(--ink); opacity: .8; font-size: 14px; }
+.ev .p { color: var(--x-i); font-size: 13px; font-weight: 500; }
+.empty { color: var(--muted); padding: 14px 4px; }
+
+/* list view */
+.list { columns: 2 300px; column-gap: 16px; }
+.dcard { break-inside: avoid; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 16px; margin-bottom: 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; }
+.dcard.past { opacity: .5; }
+.dcard h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; margin: 0; text-transform: capitalize; }
+.dcard .ev { padding: 10px 12px; grid-template-columns: 62px minmax(0, 1fr); border-radius: 16px; }
+.dcard .ev .time { font-size: 24px; }
+.dcard .ev .t { font-size: 15px; }
+
+/* later + notes */
+.later-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.later .ncard .what { font-size: 22px; }
+.notes { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 8px; max-width: 80ch; }
+.notes p { margin: 0; }
+
+@media (max-width: 640px) {
+  .cal { padding: 12px; border-radius: 24px; }
+  .cell { min-height: 58px; padding: 6px 2px 4px; align-items: center; }
+  .num { align-self: center; }
+  .pills { display: none; }
+  .dots { display: flex; justify-content: center; }
+  .grid, .dow { gap: 4px; }
+  .ev { grid-template-columns: 62px minmax(0, 1fr); gap: 10px; }
+  .ev .time { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+/* base reset (en Claude se aplica automáticamente) */
+html { color-scheme: light; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div class="eyebrow">Octubre a diciembre de 2026</div>
+    <h1>Calendario de <em>otoño</em></h1>
+    <p class="lede">Mundial de LoL, Nations League de España, Fórmula 1 y el Victoria's Secret Fashion Show en un solo sitio.</p>
+    <div class="tz">Todas las horas son de España peninsular. Cambio a horario de invierno el 25 de octubre.</div>
+  </header>
+
+  <section class="next" aria-label="Lo siguiente">
+    <h2>Lo siguiente</h2>
+    <div class="next-row" id="nextRow"></div>
+  </section>
+
+  <section aria-label="Calendario">
+    <div class="controls">
+      <div class="chips" id="chips"></div>
+      <div class="seg" role="group" aria-label="Vista">
+        <button id="vCal" aria-pressed="true">Calendario</button>
+        <button id="vList" aria-pressed="false">Lista</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="calView" style="display:flex;flex-direction:column;gap:20px">
+    <div class="cal">
+      <div class="cal-head">
+        <h2 id="monthTitle"></h2>
+        <div class="nav">
+          <button id="prev" aria-label="Mes anterior">&larr;</button>
+          <button id="nextM" aria-label="Mes siguiente">&rarr;</button>
+        </div>
+      </div>
+      <div class="dow"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="grid" id="grid"></div>
+    </div>
+    <div class="day" id="day" aria-live="polite"></div>
+  </div>
+
+  <div id="listView" hidden><div class="list" id="list"></div></div>
+
+  <section class="later">
+    <h2>Más adelante</h2>
+    <div class="later-grid">
+      <div class="ncard c-nl">
+        <span class="when">Marzo de 2027</span>
+        <span class="what">Cuartos de final de la Nations League</span>
+        <span class="meta">Si España acaba entre los dos primeros del grupo A3. Fechas por confirmar.</span>
+      </div>
+      <div class="ncard c-nl">
+        <span class="when">9 a 13 de junio de 2027</span>
+        <span class="what">Final a cuatro de la Nations League</span>
+        <span class="meta">Sede por confirmar.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <p>España ya jugó en el grupo A3 ante Inglaterra (26 sep), Croacia (29 sep) y Chequia (3 oct). Aquí solo aparecen los partidos que quedan.</p>
+    <p>Mundial de LoL: el sorteo del Play-In es el 10 de octubre. Los cruces de la fase suiza y de las eliminatorias dependen de los resultados, así que los rivales se conocen cuando acaba cada jornada. Las horas están calculadas desde la hora oficial de Riot en el Pacífico. Todas las series del Play-In son al mejor de cinco.</p>
+    <p>F1: se muestran clasificación y carrera de cada Gran Premio, más el sprint de Singapur. Las horas de clasificación de México y Las Vegas pueden variar una hora entre fuentes.</p>
+    <p>Victoria's Secret: la sede exacta y parte de la cartelera musical siguen sin anunciarse.</p>
+  </section>
+</main>
+
+<script>
+const CATS = {
+  lol: { name: "Mundial LoL" },
+  nl:  { name: "Nations League" },
+  f1:  { name: "Fórmula 1" },
+  vs:  { name: "Victoria's Secret" }
+};
+const E = [];
+const add = (d, t, c, s, T, sub, p) => E.push({ d, t, c, s, T, sub, p });
+
+/* ---------- LoL Worlds 2026 ---------- */
+const PI = "Riot Games Arena, Los Ángeles";
+add("2026-10-15", "20:00", "lol", "Play-In D1", "Play-In · Día 1", "Karmine Corp, MVK Esports, el 3.º de la LCS y el 2.º de Brasil. Dos Bo5: la segunda serie empieza hacia la 01:00 del día 16.", PI);
+add("2026-10-16", "20:00", "lol", "Play-In D2", "Play-In · Día 2", "Doble eliminación, todo Bo5. Los cruces salen de los resultados del día anterior.", PI);
+add("2026-10-17", "20:00", "lol", "Play-In D3", "Play-In · Día 3", "Doble eliminación, todo Bo5. Quien pierde en el cuadro inferior queda fuera.", PI);
+add("2026-10-18", "20:00", "lol", "Play-In D4", "Play-In · Final del día 4", "Un solo equipo pasa a la fase suiza. El resto se va a casa.", PI);
+const AL = "Credit Union of Texas Event Center, Allen";
+const sw = [["2026-10-23","19:00"],["2026-10-24","19:00"],["2026-10-25","18:00"],["2026-10-26","18:00"],["2026-10-28","21:00"],["2026-10-29","21:00"],["2026-10-30","21:00"],["2026-10-31","18:00"]];
+sw.forEach(([d,t],i)=> add(d, t, "lol", "Suizo D"+(i+1), "Fase suiza · Día "+(i+1),
+  i===0 ? "Entran los 15 clasificados directos, entre ellos G2, Movistar KOI, T1 y Gen.G, junto al ganador del Play-In. Cruces por récord de victorias y derrotas." : "16 equipos. Cada jornada empareja a equipos con el mismo récord. No hay revanchas.", AL));
+[["2026-11-03","Cuartos D1"],["2026-11-04","Cuartos D2"],["2026-11-05","Cuartos D3"],["2026-11-06","Cuartos D4"]].forEach(([d],i)=> add(d,"23:00","lol","Cuartos","Cuartos de final · Día "+(i+1),"Eliminación directa entre los 8 mejores de la fase suiza.",AL));
+add("2026-11-07","23:00","lol","Semis","Semifinal 1","Eliminación directa.",AL);
+add("2026-11-08","23:00","lol","Semis","Semifinal 2","Eliminación directa.",AL);
+add("2026-11-14","20:00","lol","Final LoL","Gran final del Mundial","Quien gane levanta la Copa del Invocador. T1 llega como tricampeón vigente.","Barclays Center, Brooklyn");
+
+/* ---------- Nations League · España (grupo A3) ---------- */
+add("2026-10-06","20:45","nl","Croacia–ESP","Croacia – España","Jornada 4 · Grupo A3 de la Liga A.","Estadio Poljud, Split");
+add("2026-11-12","20:45","nl","Chequia–ESP","Chequia – España","Jornada 5 · Grupo A3 de la Liga A.","Sede por confirmar");
+add("2026-11-15","20:45","nl","ESP–Inglaterra","España – Inglaterra","Jornada 6 · Grupo A3. Cierra la fase de liga y repite la final de la Eurocopa 2024.","Sede por confirmar");
+
+/* ---------- Fórmula 1 ---------- */
+add("2026-10-09","14:30","f1","Sprint Q","Singapur · Clasificación sprint","Fin de semana con sprint.","Marina Bay, Singapur");
+add("2026-10-10","11:00","f1","Sprint","Singapur · Carrera sprint","Carrera corta del sábado.","Marina Bay, Singapur");
+add("2026-10-10","15:00","f1","Quali Singapur","Singapur · Clasificación","Define la parrilla del domingo.","Marina Bay, Singapur");
+add("2026-10-11","14:00","f1","GP Singapur","GP de Singapur","Carrera nocturna en circuito urbano.","Marina Bay, Singapur");
+add("2026-10-24","23:00","f1","Quali Austin","Estados Unidos · Clasificación","Última noche de horario de verano en España.","Circuito de las Américas, Austin");
+add("2026-10-25","21:00","f1","GP EE. UU.","GP de Estados Unidos","Primera carrera tras el cambio de hora.","Circuito de las Américas, Austin");
+add("2026-10-31","22:00","f1","Quali México","México · Clasificación","Define la parrilla del domingo.","Autódromo Hermanos Rodríguez");
+add("2026-11-01","21:00","f1","GP México","GP de la Ciudad de México","Carrera en la altura de Ciudad de México.","Autódromo Hermanos Rodríguez");
+add("2026-11-07","19:00","f1","Quali Brasil","Brasil · Clasificación","Define la parrilla del domingo.","Interlagos, São Paulo");
+add("2026-11-08","18:00","f1","GP Brasil","GP de São Paulo","Tercera carrera de la gira americana.","Interlagos, São Paulo");
+add("2026-11-21","05:00","f1","Quali Las Vegas","Las Vegas · Clasificación","Madrugada en España: es viernes por la noche en Las Vegas.","Las Vegas Strip Circuit");
+add("2026-11-22","05:00","f1","GP Las Vegas","GP de Las Vegas","Madrugada del domingo en España: se corre el sábado por la noche en Las Vegas.","Las Vegas Strip Circuit");
+add("2026-11-28","19:00","f1","Quali Catar","Catar · Clasificación","Define la parrilla del domingo.","Lusail, Catar");
+add("2026-11-29","17:00","f1","GP Catar","GP de Catar","Carrera al atardecer en Lusail.","Lusail, Catar");
+add("2026-12-05","15:00","f1","Quali Abu Dabi","Abu Dabi · Clasificación","Última clasificación de la temporada.","Yas Marina, Abu Dabi");
+add("2026-12-06","14:00","f1","GP Abu Dabi","GP de Abu Dabi","Final de temporada.","Yas Marina, Abu Dabi");
+
+/* ---------- Victoria's Secret ---------- */
+add("2026-10-19","01:30","vs","VS Show","Victoria's Secret Fashion Show","Es el domingo 18 a las 16:30 en Los Ángeles, así que en España es la madrugada del lunes 19. Tema: Fandemonium. Con Gigi Hadid, Alex Consani, Paloma Elsesser y Abby Champion en pasarela. Actúan Megan Thee Stallion y McRae. Se emite en directo por YouTube.","Los Ángeles, sede por anunciar");
+
+E.sort((a,b)=> (a.d+a.t) < (b.d+b.t) ? -1 : 1);
+
+/* ---------- helpers ---------- */
+const MON = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const DAYN = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+const pad = n => String(n).padStart(2,"0");
+const iso = (y,m,d) => y+"-"+pad(m+1)+"-"+pad(d);
+const parse = s => { const [y,m,d] = s.split("-").map(Number); return { y, m: m-1, d }; };
+const utc = s => { const p = parse(s); return Date.UTC(p.y, p.m, p.d); };
+const longDate = s => { const p = parse(s); const w = new Date(utc(s)).getUTCDay(); return DAYN[w]+" "+p.d+" de "+MON[p.m]; };
+const nowD = new Date();
+const TODAY = iso(nowD.getFullYear(), nowD.getMonth(), nowD.getDate());
+const diffDays = s => Math.round((utc(s) - utc(TODAY)) / 86400000);
+
+const active = new Set(Object.keys(CATS));
+let view = "cal";
+let ym = { y: 2026, m: 9 };
+const tp = parse(TODAY);
+if (tp.y === 2026 && tp.m >= 9 && tp.m <= 11) ym = { y: 2026, m: tp.m };
+let sel = null;
+
+const visible = () => E.filter(e => active.has(e.c));
+const byDate = () => { const o = {}; visible().forEach(e => (o[e.d] = o[e.d] || []).push(e)); return o; };
+
+/* next up */
+function renderNext() {
+  const row = document.getElementById("nextRow");
+  const up = E.filter(e => e.d >= TODAY);
+  const picks = [];
+  ["nl","lol","f1","vs"].forEach(c => { const f = up.find(e => e.c === c); if (f) picks.push(f); });
+  picks.sort((a,b)=> (a.d+a.t) < (b.d+b.t) ? -1 : 1);
+  row.innerHTML = picks.map(e => {
+    const n = diffDays(e.d);
+    const rel = n === 0 ? "Hoy" : n === 1 ? "Mañana" : "En "+n+" días";
+    return '<div class="ncard c-'+e.c+'"><span class="when">'+CATS[e.c].name+" · "+rel+'</span><span class="what">'+e.T+'</span><span class="meta">'+longDate(e.d)+" · "+e.t+"</span></div>";
+  }).join("") || '<div class="empty">No quedan eventos próximos.</div>';
+}
+
+/* chips */
+function renderChips() {
+  const el = document.getElementById("chips");
+  el.innerHTML = Object.keys(CATS).map(c => {
+    const n = E.filter(e => e.c === c).length;
+    return '<button class="chip c-'+c+'" data-c="'+c+'" aria-pressed="'+active.has(c)+'">'+CATS[c].name+" <small>"+n+"</small></button>";
+  }).join("");
+  el.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+    const c = b.dataset.c;
+    active.has(c) ? active.delete(c) : active.add(c);
+    renderAll();
+  }));
+}
+
+/* day panel */
+function evHtml(e) {
+  return '<article class="ev c-'+e.c+'"><div class="time">'+e.t+'</div><div class="body"><span class="tag">'+CATS[e.c].name+'</span><div class="t">'+e.T+'</div><div class="s">'+e.sub+'</div><div class="p">'+e.p+"</div></div></article>";
+}
+function renderDay() {
+  const el = document.getElementById("day");
+  const map = byDate();
+  if (!sel) return;
+  const list = map[sel] || [];
+  el.innerHTML = "<h3>"+longDate(sel)+"</h3>" + (list.length ? list.map(evHtml).join("") : '<div class="empty">No hay nada este día con los filtros actuales.</div>');
+}
+
+/* month grid */
+function renderMonth() {
+  const { y, m } = ym;
+  document.getElementById("monthTitle").innerHTML = MON[m].charAt(0).toUpperCase()+MON[m].slice(1)+" <span>"+y+"</span>";
+  document.getElementById("prev").disabled = m <= 9;
+  document.getElementById("nextM").disabled = m >= 11;
+  const first = (new Date(Date.UTC(y, m, 1)).getUTCDay() + 6) % 7;
+  const n = new Date(Date.UTC(y, m+1, 0)).getUTCDate();
+  const map = byDate();
+  let h = "";
+  for (let i = 0; i < first; i++) h += '<div class="cell blank"></div>';
+  for (let d = 1; d <= n; d++) {
+    const s = iso(y, m, d);
+    const list = map[s] || [];
+    const cls = ["cell"];
+    if (s === TODAY) cls.push("today");
+    if (s < TODAY) cls.push("past");
+    if (s === sel) cls.push("sel");
+    const pills = list.slice(0,3).map(e => '<span class="pill c-'+e.c+'">'+e.t+" "+e.s+"</span>").join("") + (list.length > 3 ? '<span class="more">+'+(list.length-3)+" más</span>" : "");
+    const dots = list.map(e => '<i class="c-'+e.c+'"></i>').join("");
+    h += '<button class="'+cls.join(" ")+'" data-d="'+s+'" aria-label="'+longDate(s)+", "+list.length+' eventos"><span class="num">'+d+'</span><span class="pills">'+pills+'</span><span class="dots">'+dots+"</span></button>";
+  }
+  const g = document.getElementById("grid");
+  g.innerHTML = h;
+  g.querySelectorAll(".cell[data-d]").forEach(b => b.addEventListener("click", () => { sel = b.dataset.d; renderMonth(); renderDay(); }));
+}
+
+/* list view */
+function renderList() {
+  const map = byDate();
+  const days = Object.keys(map).sort();
+  document.getElementById("list").innerHTML = days.map(d =>
+    '<section class="dcard'+(d < TODAY ? " past" : "")+'"><h3>'+longDate(d)+"</h3>"+map[d].map(evHtml).join("")+"</section>"
+  ).join("") || '<div class="empty">Activa algún filtro para ver eventos.</div>';
+}
+
+function renderAll() {
+  renderChips();
+  if (view === "cal") { renderMonth(); renderDay(); } else { renderList(); }
+}
+
+/* wiring */
+document.getElementById("prev").addEventListener("click", () => { if (ym.m > 9) { ym.m--; renderMonth(); } });
+document.getElementById("nextM").addEventListener("click", () => { if (ym.m < 11) { ym.m++; renderMonth(); } });
+function setView(v) {
+  view = v;
+  document.getElementById("calView").hidden = v !== "cal";
+  document.getElementById("listView").hidden = v !== "list";
+  document.getElementById("vCal").setAttribute("aria-pressed", v === "cal");
+  document.getElementById("vList").setAttribute("aria-pressed", v === "list");
+  renderAll();
+}
+document.getElementById("vCal").addEventListener("click", () => setView("cal"));
+document.getElementById("vList").addEventListener("click", () => setView("list"));
+
+const firstUp = E.find(e => e.d >= TODAY);
+sel = firstUp ? firstUp.d : "2026-10-06";
+if (firstUp) { const p = parse(sel); if (p.y === 2026 && p.m >= 9 && p.m <= 11) ym = { y: 2026, m: p.m }; }
+renderNext();
+renderAll();
+</script>
+
+</body>
+</html>
